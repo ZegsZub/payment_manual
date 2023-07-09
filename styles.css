@@ -21,23 +21,8 @@ body {
     from {opacity: 0;}
     to {opacity: 1;}
 }
-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, transparent, #800080, transparent);
-    animation: glow 2s infinite;
-}
-@keyframes glow {
-    0% {transform: translateX(-100%);}
-    50% {transform: translateX(-100%);}
-    100% {transform: translateX(100%);}
-}
 h1, h2 {
-    color: #00ff00; /* Bright green color for Grow theme */
+    color: #ff00ff; /* Change text color to bright purple for better contrast */
     animation: textFadeIn 2s;
     position: relative;
 }
@@ -45,19 +30,11 @@ h1, h2 {
     from {opacity: 0;}
     to {opacity: 1;}
 }
-h1::after, h2::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, transparent, #800080, transparent);
-    animation: glow 2s infinite;
-    opacity: .3;
-}
 p {
     margin-bottom: 20px;
+}
+a {
+    color: #ff00ff; /* Change link color to bright purple for better contrast */
 }
 .crypto {
     background-color: #444;
@@ -69,14 +46,28 @@ p {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     animation: cryptoFadeIn 3s;
+    position: relative;
 }
 @keyframes cryptoFadeIn {
     from {opacity: 0;}
     to {opacity: 1;}
 }
+.crypto::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, #800080, transparent);
+    animation: glow 2s infinite;
+    opacity: .3;
+    z-index: -1;
+    border-radius: 10px;
+}
 .crypto h2 {
     margin-top: 0;
-    color: #00ff00; /* Bright green color for Grow theme */
+    color: #ff00ff; /* Change text color to bright purple for better contrast */
 }
 .crypto:hover {
     transform: scale(1.05);
