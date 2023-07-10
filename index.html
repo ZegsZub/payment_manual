@@ -13,39 +13,45 @@
             document.body.removeChild(input);
             return result;
         }
+        
+        function changeLanguage(lang) {
+            var currentUrl = window.location.href;
+            var newUrl;
+            if (currentUrl.indexOf('?lang=') > -1) {
+                newUrl = currentUrl.replace(/lang=[a-zA-Z]+/, 'lang=' + lang);
+            } else {
+                newUrl = currentUrl + '?lang=' + lang;
+            }
+            window.location.href = newUrl;
+        }
     </script>
 </head>
 <body>
-    <h1>Оплата Мануала "Частина 1 Вибір і збірка системи"</h1>
-    <div class="telegram-button">
-        <a href="https://t.me/Atome_honey" target="_blank"><img src="telegram.png" alt="Telegram Icon"></a>
-    </div>
-    <p>Ціна мануала складає 100 доларів США. Ви можете оплатити його, використовуючи наступні криптовалюти:</p>
-    <div class="crypto">
-        <h2>1. USDT (TRON – TRC20)</h2>
-        <p>Адреса для оплати: <span id="usdt-address">TKVPydVRgg1uNq2uUMyYTyLpovdo9q7rfn</span> <button onclick="copyToClipboard('usdt-address')">Копіювати</button></p>
-        <p>Будь ласка, переконайтеся, що ви відправляєте USDT через мережу TRON (TRC20).</p>
-        <p>Щоб переглянути актуальні курси криптовалют, будь ласка, відвідайте <a href="https://www.coingecko.com/" target="_blank">CoinGecko</a>.</p>
-    </div>
-    <div class="crypto">
-        <h2>2. TON (The Open Network – TON)</h2>
-        <p>Адреса для оплати: <span id="ton-address">EQCBp5lJg4X4WUqtnXG9ibBsmIZampgbiEnwGtmAfgyJ7Sgd</span> <button onclick="copyToClipboard('ton-address')">Копіювати</button></p>
-        <p>Будь ласка, переконайтеся, що ви відправляєте TON через мережу The Open Network.</p>
-        <p>Щоб переглянути актуальні курси криптовалют, будь ласка, відвідайте <a href="https://www.coingecko.com/" target="_blank">CoinGecko</a>.</p>
-    </div>
-    <div class="crypto">
-        <h2>3. BTC (Bitcoin – BTC)</h2>
-        <p>Адреса для оплати: <span id="btc-address">bc1qc96nk0vdtlekgt2cxxax0nrj4jp4hwepqhrgsr</span> <button onclick="copyToClipboard('btc-address')">Копіювати</button></p>
-        <p>Будь ласка, переконайтеся, що ви відправляєте BTC через мережу Bitcoin.</p>
-        <p>Щоб переглянути актуальні курси криптовалют, будь ласка, відвідайте <a href="https://www.coingecko.com/" target="_blank">CoinGecko</a>.</p>
-    </div>
-    <div class="crypto">
-        <h2>4. ETH (Ethereum – ERC20)</h2>
-        <p>Адреса для оплати: <span id="eth-address">0x58A1fE74Ada1cae1236Bd831612dd83fd5F0Ad55</span> <button onclick="copyToClipboard('eth-address')">Копіювати</button></p>
-        <p>Будь ласка, переконайтеся, що ви відправляєте ETH через мережу Ethereum (ERC20).</p>
-        <p>Щоб переглянути актуальні курси криптовалют, будь ласка, відвідайте <a href="https://www.coingecko.com/" target="_blank">CoinGecko</a>.</p>
-    </div>
-    <p>‼️ Після оплати, будь ласка, надішліть hash транзакції на наш Telegram аккаунт: <a href="https://t.me/Atome_honey" target="_blank"><img src="telegram.png" alt="Telegram Icon"></a>‼️</p>
-    <p>Ми надішлемо вам мануал, як тільки підтвердимо оплату.</p>
-</body>
-</html>
+    <div class="top-margin"></div>
+    <div class="content">
+        <h1>Оплата Мануала "Частина 1 Вибір і збірка системи"</h1>
+        <div class="telegram-button">
+            <a href="https://t.me/Atome_honey" target="_blank"><img src="telegram.png" alt="Telegram Icon"></a>
+        </div>
+        <p>Ціна мануала складає 100 доларів США. Ви можете оплатити його, використовуючи наступні криптовалюти:</p>
+        <div class="crypto">
+            <h2>1. USDT (TRON – TRC20)</h2>
+            <p>Адреса для оплати: <span id="usdt-address">TKVPydVRgg1uNq2uUMyYTyLpovdo9q7rfn</span> <button onclick="copyToClipboard('usdt-address')">Копіювати</button></p>
+            <p>Будь ласка, переконайтеся, що ви відправляєте USDT через мережу TRON (TRC20).</p>
+            <p>Щоб переглянути актуальні курси криптовалют, будь ласка, відвідайте <a href="https://www.coingecko.com/" target="_blank">CoinGecko</a>.</p>
+        </div>
+        <div class="crypto">
+            <h2>2. TON (The Open Network – TON)</h2>
+            <p>Адреса для оплати: <span id="ton-address">EQCBp5lJg4X4WUqtnXG9ibBsmIZampgbiEnwGtmAfgyJ7Sgd</span> <button onclick="copyToClipboard('ton-address')">Копіювати</button></p>
+            <p>Будь ласка, переконайтеся, що ви відправляєте TON через мережу The Open Network.</p>
+            <p>Щоб переглянути актуальні курси криптовалют, будь ласка, відвідайте <a href="https://www.coingecko.com/" target="_blank">CoinGecko</a>.</p>
+        </div>
+        <div class="crypto">
+            <h2>3. BTC (Bitcoin – BTC)</h2>
+            <p>Адреса для оплати: <span id="btc-address">bc1qc96nk0vdtlekgt2cxxax0nrj4jp4hwepqhrgsr</span> <button onclick="copyToClipboard('btc-address')">Копіювати</button></p>
+            <p>Будь ласка, переконайтеся, що ви відправляєте BTC через мережу Bitcoin.</p>
+            <p>Щоб переглянути актуальні курси криптовалют, будь ласка, відвідайте <a href="https://www.coingecko.com/" target="_blank">CoinGecko</a>.</p>
+        </div>
+        <div class="crypto">
+            <h2>4. ETH (Ethereum – ERC20)</h2>
+            <p>Адреса для оплати: <span id="eth-address">0x58A1fE74Ada1cae1236Bd831612dd83fd
