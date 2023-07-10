@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            padding: 20px;
+        }
+    </style>
     <script>
         function copyToClipboard(id) {
             var text = document.getElementById(id).innerText;
@@ -13,7 +20,7 @@
             document.body.removeChild(input);
             return result;
         }
-        
+
         function changeLanguage(lang) {
             var currentUrl = window.location.href;
             var newUrl;
@@ -27,36 +34,37 @@
     </script>
 </head>
 <body>
-    <h1>Оплата Мануала "Частина 1 Вибір та збірка системи"</h1>
+    <h1>Оплата Мануала "Часть 1 Вибір та збірка системи"</h1>
     <p>Ціна мануала становить 100 доларів США. Ви можете оплатити його, використовуючи наступні криптовалюти:</p>
     <div class="crypto">
         <h2>1. USDT (TRON – TRC20)</h2>
         <p>Адреса для оплати: <span id="usdt-address">TKVPydVRgg1uNq2uUMyYTyLpovdo9q7rfn</span> <button onclick="copyToClipboard('usdt-address')">Копіювати</button></p>
         <p>Будь ласка, переконайтеся, що ви відправляєте USDT через мережу TRON (TRC20).</p>
-        <p>Для перегляду поточних курсів криптовалют, будь ласка, відвідайте <a href="https://www.coingecko.com/" target="_blank">CoinGecko</a>.</p>
+        <p>Для перегляду актуальних курсів криптовалют, будь ласка, відвідайте <a href="https://www.coingecko.com/" target="_blank">CoinGecko</a>.</p>
     </div>
     <div class="crypto">
         <h2>2. TON (The Open Network – TON)</h2>
         <p>Адреса для оплати: <span id="ton-address">EQCBp5lJg4X4WUqtnXG9ibBsmIZampgbiEnwGtmAfgyJ7Sgd</span> <button onclick="copyToClipboard('ton-address')">Копіювати</button></p>
         <p>Будь ласка, переконайтеся, що ви відправляєте TON через мережу The Open Network.</p>
-        <p>Для перегляду поточних курсів криптовалют, будь ласка, відвідайте <a href="https://www.coingecko.com/" target="_blank">CoinGecko</a>.</p>
+        <p>Для перегляду актуальних курсів криптовалют, будь ласка, відвідайте <a href="https://www.coingecko.com/" target="_blank">CoinGecko</a>.</p>
     </div>
     <div class="crypto">
         <h2>3. BTC (Bitcoin – BTC)</h2>
         <p>Адреса для оплати: <span id="btc-address">bc1qc96nk0vdtlekgt2cxxax0nrj4jp4hwepqhrgsr</span> <button onclick="copyToClipboard('btc-address')">Копіювати</button></p>
         <p>Будь ласка, переконайтеся, що ви відправляєте BTC через мережу Bitcoin.</p>
-        <p>Для перегляду поточних курсів криптовалют, будь ласка, відвідайте <a href="https://www.coingecko.com/" target="_blank">CoinGecko</a>.</p>
+        <p>Для перегляду актуальних курсів криптовалют, будь ласка, відвідайте <a href="https://www.coingecko.com/" target="_blank">CoinGecko</a>.</p>
     </div>
     <div class="crypto">
         <h2>4. ETH (Ethereum – ERC20)</h2>
         <p>Адреса для оплати: <span id="eth-address">0x58A1fE74Ada1cae1236Bd831612dd83fd5F0Ad55</span> <button onclick="copyToClipboard('eth-address')">Копіювати</button></p>
         <p>Будь ласка, переконайтеся, що ви відправляєте ETH через мережу Ethereum (ERC20).</p>
+        <p>Для перегляду актуальних курсів криптовалют, будь ласка, відвідайте <a href="https://www.coingecko.com/" target="_blank">CoinGecko</a>.</p>
     </div>
-    <p>!!! Після оплати, будь ласка, надішліть скріншот підтвердження оплати і хеш транзакції на наш аккаунт у Telegram: <a href="https://t.me/Atome_honey" target="_blank"><img src="https://img.icons8.com/color/48/000000/telegram-app.png"/> @Atome_honey</a> !!!</p>
+    <p>!!! После оплати, пожалуйста, отправьте скриншот подтверждения оплаты и хеш транзакции на наш аккаунт в Telegram: <a href="https://t.me/Atome_honey" target="_blank"><img src="https://img.icons8.com/color/48/000000/telegram-app.png"/> @Atome_honey</a> !!!</p>
     <div class="language">
-        <button onclick="changeLanguage('uk')">Українська</button>
-        <button onclick="changeLanguage('en')">English</button>
-        <button onclick="changeLanguage('ru')">Русский</button>
+        <button onclick="window.location.href='index_uk.html'">Українська</button>
+        <button onclick="window.location.href='index_en.html'">English</button>
+        <button onclick="window.location.href='index.html'">Русский</button>
     </div>
 </body>
 </html>
