@@ -13,21 +13,13 @@
             document.body.removeChild(input);
             return result;
         }
-        
-        function changeLanguage(lang) {
-            var currentUrl = window.location.href;
-            var newUrl;
-            if (currentUrl.indexOf('?lang=') > -1) {
-                newUrl = currentUrl.replace(/lang=[a-zA-Z]+/, 'lang=' + lang);
-            } else {
-                newUrl = currentUrl + '?lang=' + lang;
-            }
-            window.location.href = newUrl;
-        }
     </script>
 </head>
 <body>
     <h1>Оплата Мануала "Частина 1 Вибір і збірка системи"</h1>
+    <div class="telegram-button">
+        <a href="https://t.me/Atome_honey" target="_blank"><img src="telegram.png" alt="Telegram Icon"></a>
+    </div>
     <p>Ціна мануала складає 100 доларів США. Ви можете оплатити його, використовуючи наступні криптовалюти:</p>
     <div class="crypto">
         <h2>1. USDT (TRON – TRC20)</h2>
@@ -53,12 +45,7 @@
         <p>Будь ласка, переконайтеся, що ви відправляєте ETH через мережу Ethereum (ERC20).</p>
         <p>Щоб переглянути актуальні курси криптовалют, будь ласка, відвідайте <a href="https://www.coingecko.com/" target="_blank">CoinGecko</a>.</p>
     </div>
-    <p>‼️ Після оплати, будь ласка, надішліть hash транзакції на наш Telegram аккаунт: <a href="https://t.me/Atome_honey" target="_blank"><img src="https://img.icons8.com/color/48/000000/telegram-app--v1.png"/></a>‼️</p>
+    <p>‼️ Після оплати, будь ласка, надішліть hash транзакції на наш Telegram аккаунт: <a href="https://t.me/Atome_honey" target="_blank"><img src="telegram.png" alt="Telegram Icon"></a>‼️</p>
     <p>Ми надішлемо вам мануал, як тільки підтвердимо оплату.</p>
-    <div class="language">
-        <button onclick="changeLanguage('uk')">Українська</button>
-        <button onclick="changeLanguage('en')">English</button>
-        <button onclick="changeLanguage('ru')">Русский</button>
-    </div>
 </body>
 </html>
