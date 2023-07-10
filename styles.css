@@ -16,6 +16,9 @@ body {
     animation: bodyFadeIn 1s;
     position: relative;
     overflow: hidden;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	zoom: 0.85;
 }
 @keyframes bodyFadeIn {
     from {opacity: 0;}
